@@ -31,4 +31,4 @@ management:
         exposure:
           include: bus-refresh
           #exclude:             # 不需要开启的端点
-hello: hello,client
+hello: hello,client update
