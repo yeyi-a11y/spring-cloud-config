@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: zuul
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: yeyi
+    password: 123456
+    # 开启消息跟踪
+  cloud:
+    bus:
+      trace:
+        enabled: true
 eureka:
   client:
     serviceUrl:
@@ -19,3 +29,14 @@ zuul:
     route_consumer:
       path: /consumer/**  #匹配的 URL 地址,路由给匹配的服务后，服务收到的的url为/**。
       service-id:  CONSUMER #匹配的服务名称。
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      base-path: /actuator
+      # 需要开启的端点，这里主要用到的是 bus-refresh 这个端点
+      exposure:
+        include: bus-refresh
+        #exclude:             # 不需要开启的端点
+hello: hello,client update
