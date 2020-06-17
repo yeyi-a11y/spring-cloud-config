@@ -24,4 +24,4 @@ eureka:
 management:
   security:
     enabled: false
-hello: hello,client
+hello: hello,client update
