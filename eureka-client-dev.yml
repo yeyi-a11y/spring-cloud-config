@@ -8,6 +8,11 @@ spring:
     port: 5672
     username: yeyi
     password: 123456
+   # 开启消息跟踪
+  cloud:
+    bus:
+     trace:
+       enabled: true    
 eureka:
   client:
     serviceUrl:
